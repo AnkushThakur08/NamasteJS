@@ -1,16 +1,34 @@
-console.log(n);
+console.log(a);
+console.log(ank);
+ank();
+anku();
+ankush();
 
-var square2 = square(n);
-var square4 = square(4);
-  
+var a = 10;
 
-function square(num) {
-  ans = num * num;
-  console.log(ans);
-  return ans;
+function ank() {
+  console.log("Line no 8: This is ank function");
 }
 
 var ankush = () => {
-  var a = 20;
-  console.log(a);
+  console.log("Callback");
 };
+
+var anku = function () {
+  console.log("Normal function");
+};
+
+// var x = 1;
+// a();
+// b();
+// console.log(x);
+
+// function a() {
+//   var x = 10;
+//   console.log(x);
+// }
+
+// function b() {
+//   var x = 100;
+//   console.log(x);
+// }
