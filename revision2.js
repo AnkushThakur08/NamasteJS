@@ -162,3 +162,5 @@ function Counter() {
   counter1.incrementCounter();
   counter1.decrementCounter();
    */
+
+/* TODO: Higher Order Function */
