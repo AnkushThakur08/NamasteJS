@@ -15,7 +15,6 @@ function b(a) {
 const radius = [1, 4, 5, 8];
 
 const AreaFormula = (radius) => {
-  console.log("radius", radius);
   return Math.PI * radius * radius;
 };
 

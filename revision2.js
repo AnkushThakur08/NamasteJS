@@ -164,3 +164,65 @@ function Counter() {
    */
 
 /* TODO: Higher Order Function */
+// function a(name) {
+//   console.log(`My Name is ${name}`);
+// }
+
+// function b(a, name) {
+//   a(name);
+// }
+
+// b(a, "Thakur");
+
+/* TODO: Functional Programming */
+
+const radius = [1, 2, 3, 4];
+
+// const CalculateArea = (radius) => {
+//   let output = [];
+//   for (let i = 0; i < radius.length; i++) {
+//     output.push(Math.PI * radius[i] * radius[i]);
+//   }
+//   console.log(output);
+// };
+
+// const CalculateCircumference = (radius) => {
+//   let output = [];
+
+//   for (let i = 0; i < radius.length; i++) {
+//     output.push(2 * Math.PI * radius[i]);
+//   }
+//   console.log(output);
+// };
+
+// const CalculateDiameter = (radius) => {
+//   let output = [];
+
+//   for (i = 0; i < radius.length; i++) {
+//     output.push(2 * radius[i]);
+//   }
+
+//   console.log(output);
+// };
+
+// CalculateArea(radius);
+// CalculateCircumference(radius);
+// CalculateDiameter(radius);
+
+const AreaFormula = (radius) => Math.PI * radius * radius;
+const CircumferenceFormula = (radius) => 2 * Math.PI * radius;
+const DiameterFormula = (radius) => 2 * radius;
+
+const CircleCalculation = (radius, formula) => {
+  let output = [];
+  console.log(formula);
+
+  for (let i = 0; i < radius.length; i++) {
+    output.push(formula(radius[i]));
+  }
+  console.log(output);
+};
+
+CircleCalculation(radius, AreaFormula);
+CircleCalculation(radius, CircumferenceFormula);
+CircleCalculation(radius, DiameterFormula);
