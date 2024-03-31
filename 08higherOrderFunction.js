@@ -1,11 +1,11 @@
-/* function a() {
+function a() {
   console.log("Ankush");
 }
 
 function b(a) {
   a();
 }
- */
+
 /* Function a is Callback Function
     Function b is a HOF
 */
