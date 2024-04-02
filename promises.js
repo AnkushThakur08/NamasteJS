@@ -1,11 +1,12 @@
-const GithubApi = "https://api.github.com/users/ankushthakur08";
+const cart = ["pant", "shoes", "purfume"];
 
-const res = fetch(GithubApi);
+/* createOrder - This is my Api, which will return me a orderId */
+const promise = createOrder(cart);
 
-res.then((data) => {
-  console.log(data);
+/* return = {} or {data : (value which is returned by the createOrderApi)} */
+
+promise.then(() => {
+  createOrder();
 });
 
-
-
-// javsyed@deloitte.com
+/* Before we were passing the callback function, now we are attaching the callback to the promise object */

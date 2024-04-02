@@ -7,7 +7,6 @@ const users = [
 ];
 
 /* list of FullName */
-
 const res = users.map((values) => values.firstName + " " + values.lastName);
 console.log(res); /* Result in array */
 
@@ -33,6 +32,7 @@ console.log(calculateAge);
 const firstName = users.filter((value) => value.age < 30).map((value) => value.firstName); /* after filter we will use map */
 console.log(firstName); /* this give the result but i want only first name */
 
+/* Same with Reduce */
 // const output = user.reduce((acc, current) => {
 
 //     if(current.age < 30){
