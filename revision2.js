@@ -209,7 +209,7 @@ const radius = [1, 2, 3, 4];
 // CalculateCircumference(radius);
 // CalculateDiameter(radius);
 
-const AreaFormula = (radius) => Math.PI * radius * radius;
+/* const AreaFormula = (radius) => Math.PI * radius * radius;
 const CircumferenceFormula = (radius) => 2 * Math.PI * radius;
 const DiameterFormula = (radius) => 2 * radius;
 
@@ -226,3 +226,12 @@ const CircleCalculation = (radius, formula) => {
 CircleCalculation(radius, AreaFormula);
 CircleCalculation(radius, CircumferenceFormula);
 CircleCalculation(radius, DiameterFormula);
+ */
+
+/* TODO: Promises */
+
+const githubApi = "https://api.github.com/users/ankushthakur08";
+
+const res = fetch(githubApi)
+  .then((data) => data.json())
+  .then((data) => console.log(data));
