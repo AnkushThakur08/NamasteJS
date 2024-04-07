@@ -1,6 +1,7 @@
 const p1 = new Promise((resolve, reject) => {
   setTimeout(() => {
-    resolve("P1 Resolve");
+    // resolve("P1 Resolve");
+    reject("P1 Resolve");
   }, 3000);
 });
 
@@ -29,4 +30,5 @@ result
   })
   .catch((error) => {
     console.log(error);
+    console.log(error.errors);
   });
