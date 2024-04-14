@@ -110,3 +110,56 @@ outer()(); */
 
 // const res = outest();
 // res()("Sharma");
+
+/* TODO: SetTimeOut */
+
+// const printNumber = () => {
+//   for (var i = 1; i <= 5; i++) {
+//     setTimeout(() => {
+//       console.log(i);
+//     }, i * 1000);
+//   }
+// };
+// /* Here it is reference of i not the value */
+// /* i is refering to same memory location, bcz it is lvar */
+
+// printNumber();
+
+// const printNumber = () => {
+//   for (var i = 1; i <= 5; i++) {
+//     const printDelay = (x) => {
+//       setTimeout(() => {
+//         console.log(x);
+//       }, x * 1000);
+//     };
+//     printDelay(i);
+//   }
+// };
+// /* Here it is reference of i not the value */
+// /* i is refering to same memory location, bcz it is lvar */
+
+// printNumber();
+
+/* TODO: DATA Hiding */
+
+// function Counter() {
+//   let count = 0;
+
+//   this.incrementCounter = function () {
+//     count++;
+//     console.log(count);
+//   };
+
+//   this.decrementCounter = function () {
+//     count--;
+//     console.log(count);
+//   };
+// }
+
+// const counter1 = new Counter();
+
+// counter1.incrementCounter();
+// counter1.incrementCounter();
+// counter1.incrementCounter();
+// counter1.incrementCounter();
+// counter1.decrementCounter();
