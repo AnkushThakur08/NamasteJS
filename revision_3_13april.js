@@ -163,3 +163,121 @@ outer()(); */
 // counter1.incrementCounter();
 // counter1.incrementCounter();
 // counter1.decrementCounter();
+
+/* TODO: MAP, FILTER, REDUCE */
+// let sum = 0;
+// const arr = [10, 30, 55, 44, 89, 76, 5, 7, 6];
+
+// arr.map((value, index) => console.log(value * 1));
+// arr.map((value, index) => {
+//   sum = sum + value;
+//   console.log(sum);
+// });
+
+// arr.filter((value) => console.log(value > 40));
+// const res = arr.reduce((acc, curr) => {
+//   return (acc = acc + curr);
+// }, 0);
+
+// console.log(res);
+
+const users = [
+  { firstName: "John", lastName: "Doe", age: 40 },
+  { firstName: "Ankush", lastName: "Thakur", age: 25 },
+  { firstName: "Yash", lastName: "Matta", age: 40 },
+  { firstName: "Vipul", lastName: "Sharma", age: 20 },
+  { firstName: "Rohit", lastName: "Sharma", age: 20 },
+];
+/* FIXME: get the list of FullName */
+
+// users.map((value) => {
+//   console.log(`${value.firstName} ${value.lastName}`);
+// });
+
+// const res2 = users.map((value) => value.firstName + " " + value.lastName);
+
+// console.log(...res2);
+
+/*FIXME: list of ageGroup
+{40:2, 25: 1, 20:2}
+*/
+// const calculateAge = users.reduce((acc, curr) => {
+//   // console.log(acc[curr.age]);
+//   if (acc[curr.age]) {
+//     acc[curr.age] = acc[curr.age] + 1;
+//   } else {
+//     acc[curr.age] = 1;
+//   }
+//   return acc;
+// }, {});
+
+// console.log(calculateAge);
+
+// FIXME: /* First name of all the People whose age is less than 30 */
+// const res = users.filter((user) => user.age < 30).map((user) => user.firstName);
+
+// console.log(...res);
+
+/*TODO: Call Back hell & Promises */
+
+// api.createOrder(() => {
+//   api.processToPayment(() => {
+//     api.updateWallet(() => {
+//       api.showOrderSummary();
+//     });
+//   });
+// });
+
+// const promise = api.createOrder(); /* OrderID */
+
+// promise.then(() => {
+//   api.ProcessToPayment();
+// });
+
+/* TODO: Promise Chaining */
+// const cart = ["jeans, purfume, Wallet"];
+const cart = ["jeans, purfume, Wallet"];
+
+const promise = createOrder(cart); /* OrderID */
+
+promise
+  .then((orderID) => {
+    console.log(orderID);
+    return proceedToPayment(orderID); /* paymentID */
+  })
+  .then((paymentID) => {
+    console.log("SUCCESS");
+  })
+  .catch((err) => console.log(err));
+
+function createOrder(cart) {
+  const result = new Promise((resolve, reject) => {
+    if (cart.length === 0) {
+      const err = new Error("Cart is empty");
+      reject(err);
+    }
+
+    const orderID = "7678676";
+    setTimeout(() => {
+      resolve(orderID);
+    }, 2000);
+  });
+
+  return result;
+}
+
+function proceedToPayment(orderID) {
+  const result = new Promise((resolve, reject) => {
+    if (!orderID) {
+      const err = new Error("ERROR");
+      reject(err);
+    }
+
+    const paymentID = "payment_ID_232343";
+    setTimeout(() => {
+      resolve(paymentID);
+    }, 6000);
+  });
+
+  return result;
+}
