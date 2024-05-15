@@ -54,28 +54,33 @@ Bcz JS waits for none
 // };
 
 // getData();
-/* JS DOES NOT WAIT, I JUST seems to be waited
+/* JS DOES NOT WAIT, BUT IT JUST seems to be waited
 but actually the function was suspended and then after the time expired it come into the call stack
 */
 
 /* TODO: HOW FETCH WORKS */
 // 1. IT returns a promise, promise will hold a Response
 // 2. Now we convert that response with data.json WHICH IS AGAIN AN ANOTHER PROMISE, THIS WILL RETURN AN JSON VALUE
-// const res = await fetch(url)
-// const res = await data.json()
+const url = "https://api.github.com/users/ankushthakur08";
+// const fetchData = async () => {
+//   const data = await fetch(url);
+//   const res = await data.json();
+//   console.log(res);
+// };
+// fetchData();
 
-// fetch(url)
-//   .then((data) => data.json())
-//   .then((res) => console.log(res));
+fetch(url)
+  .then((data) => data.json())
+  .then((res) => console.log(res));
 
-const url2 = "https://api.github.com/users/ankushthakur08";
+// const url2 = "https://api.github.com/users/ankushthakur08";
 
-const getUser = async () => {
-  const data = await fetch(url2);
+// const getUser = async () => {
+//   const data = await fetch(url2);
 
-  const jsonValue = await data.json();
+//   const jsonValue = await data.json();
 
-  console.log(jsonValue);
-};
+//   console.log(jsonValue);
+// };
 
-getUser();
+// getUser();

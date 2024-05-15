@@ -235,3 +235,15 @@ const githubApi = "https://api.github.com/users/ankushthakur08";
 const res = fetch(githubApi)
   .then((data) => data.json())
   .then((data) => console.log(data));
+
+function getName() {
+  var myName = "Ankush Thakur";
+
+  function printName() {
+    console.log(myName);
+  }
+  return printName;
+}
+
+const res2 = getName();
+res2();

@@ -35,19 +35,19 @@
 
 /* TODO: Lexical Scoping */
 
-/* var myName = "ankush";
-function getAge() {
-  var myAge = 24;
+// var myName = "ankush";
+// function getAge() {
+//   var myAge = 24;
 
-  function printAge() {
-    console.log(myAge);
-  }
+//   function printAge() {
+//     console.log(myAge);
+//   }
 
-  printAge();
-  console.log(myName);
-}
+//   printAge();
+//   console.log(myName);
+// }
 
-getAge(); */
+// getAge();
 
 /* TODO: Let_Const_Var */
 
@@ -55,8 +55,8 @@ getAge(); */
 // console.log(b);
 // console.log(c);
 // var a = 10; /* Global Space - undefined */
-// const b = 20; /* Different Space - undefined  */
-// let c = 30; /* Different Space - undefined */
+// const b = 20; /* Different Space - not defined  */
+// let c = 30; /* Different Space - not defined */
 
 /* TODO: BlOCK Space */
 
@@ -236,48 +236,48 @@ const users = [
 
 /* TODO: Promise Chaining */
 // const cart = ["jeans, purfume, Wallet"];
-const cart = ["jeans, purfume, Wallet"];
+// const cart = ["jeans, purfume, Wallet"];
 
-const promise = createOrder(cart); /* OrderID */
+// const promise = createOrder(cart); /* OrderID */
 
-promise
-  .then((orderID) => {
-    console.log(orderID);
-    return proceedToPayment(orderID); /* paymentID */
-  })
-  .then((paymentID) => {
-    console.log("SUCCESS");
-  })
-  .catch((err) => console.log(err));
+// promise
+//   .then((orderID) => {
+//     console.log(orderID);
+//     return proceedToPayment(orderID); /* paymentID */
+//   })
+//   .then((paymentID) => {
+//     console.log("SUCCESS", paymentID);
+//   })
+//   .catch((err) => console.log(err));
 
-function createOrder(cart) {
-  const result = new Promise((resolve, reject) => {
-    if (cart.length === 0) {
-      const err = new Error("Cart is empty");
-      reject(err);
-    }
+// function createOrder(cart) {
+//   const result = new Promise((resolve, reject) => {
+//     if (cart.length === 0) {
+//       const err = new Error("Cart is empty");
+//       reject(err);
+//     }
 
-    const orderID = "7678676";
-    setTimeout(() => {
-      resolve(orderID);
-    }, 2000);
-  });
+//     const orderID = "7678676";
+//     setTimeout(() => {
+//       resolve(orderID);
+//     }, 2000);
+//   });
 
-  return result;
-}
+//   return result;
+// }
 
-function proceedToPayment(orderID) {
-  const result = new Promise((resolve, reject) => {
-    if (!orderID) {
-      const err = new Error("ERROR");
-      reject(err);
-    }
+// function proceedToPayment(orderID) {
+//   const result = new Promise((resolve, reject) => {
+//     if (!orderID) {
+//       const err = new Error("ERROR");
+//       reject(err);
+//     }
 
-    const paymentID = "payment_ID_232343";
-    setTimeout(() => {
-      resolve(paymentID);
-    }, 6000);
-  });
+//     const paymentID = "payment_ID_232343";
+//     setTimeout(() => {
+//       resolve(paymentID);
+//     }, 6000);
+//   });
 
-  return result;
-}
+//   return result;
+// }
