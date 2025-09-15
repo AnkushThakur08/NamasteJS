@@ -245,35 +245,52 @@
 
 
 
-/* ASYNC & AWAIT */
-const p1 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve("Promise 1");
-  }, 10000);
-});
+/*TODO: ASYNC & AWAIT */
+// const p1 = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve("Promise 1");
+//   }, 10000);
+// });
 
 
-const p2 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve("Promise 2");
-  }, 5000);
-});
+// const p2 = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve("Promise 2");
+//   }, 5000);
+// });
 
 
-const getData = async () => {
-  console.log("Start");
-  const res1 = await p1;
+// const getData = async () => {
+//   console.log("Start");
+//   const res1 = await p1;
 
 
-  console.log("STEP -1");
-  console.log(res1);
+//   console.log("STEP -1");
+//   console.log(res1);
 
 
-  const res2 = await p2;
+//   const res2 = await p2;
 
 
-  console.log("STEP -2");
-  console.log(res2);
-};
+//   console.log("STEP -2");
+//   console.log(res2);
+// };
 
-getData()
+// getData()
+
+
+/* TODO: Sort */
+
+const number = [10,3, 6, 700, 45, 32, 78]
+
+
+const handleSort = () => {
+
+  console.log("numbers", number);
+  
+  console.log("sort", [...number].sort((a, b) => a-b ))
+
+  // return [...number]
+}
+
+handleSort()
