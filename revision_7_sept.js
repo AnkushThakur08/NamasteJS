@@ -1,19 +1,18 @@
 /*TODO: HOISTING */
 
-// printNumber()
+printNumber()
 
 // function printNumber() {
-//     const a  = 10;
+//     var a = 10;
 //     console.log(a);
 // }
 
-// var printNumber = () => {
-//     const a = 20;
-//     console.log(a);
+var printNumber = () => {
+    const a = 20;
+    console.log(a);
+}
 
-// }
-
-// console.log(a);
+console.log(a);
 
 // var a = 100;
 
@@ -281,16 +280,16 @@
 
 /* TODO: Sort */
 
-const number = [10,3, 6, 700, 45, 32, 78]
+// const number = [10,3, 6, 700, 45, 32, 78]
 
 
-const handleSort = () => {
+// const handleSort = () => {
 
-  console.log("numbers", number);
+//   console.log("numbers", number);
   
-  console.log("sort", [...number].sort((a, b) => a-b ))
+//   console.log("sort", [...number].sort((a, b) => a-b ))
 
-  // return [...number]
-}
+//   // return [...number]
+// }
 
-handleSort()
+// handleSort()
